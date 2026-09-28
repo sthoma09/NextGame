@@ -72,7 +72,6 @@ public class NextGame {
 
                 }
 
- 
 
                 if (!quit) {
 
@@ -83,11 +82,16 @@ public class NextGame {
                         if (guess[i] < 1 || guess[i] > 5) {
 
                             System.out.println("Use only digits 1 through 5.");
+                            
+                            entry = input.next();
+                            
+                        }else{
+                        	if(entry.equals("0")) {
+                            
+                        		quit = true;
 
-                            quit = true;
-
-                            break;
-
+                        		break;
+                        	}
                         }
 
                     }
